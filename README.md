@@ -1,6 +1,12 @@
 # MERN Stack CRUD Application
 
-Welcome to the **MERN Stack CRUD Application**! This project is a basic implementation of a CRUD (Create, Read, Update, Delete) application for managing a products database stored in MongoDB. Currently, the backend is fully functional, and the frontend will be available soon.
+Welcome to the **MERN Stack CRUD Application**!
+This project is a basic implementation of a CRUD (Create, Read, Update, Delete) application for managing a products database stored in MongoDB. Currently, the backend is fully functional, and the frontend will be available soon.
+
+## What's New
+
+- The codebase is now highly modularized, making it easier to maintain and extend.
+- The entire backend application is ready for the frontend to consume, with well-defined API endpoints and robust error handling.
 
 ## Features
 
@@ -46,12 +52,12 @@ Make sure you have the following installed:
 
    ```env
    MONGO_URI=your_mongodb_connection_string
-   PORT=5000
+
    ```
 
 4. Start the backend server:
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## API Endpoints
@@ -59,6 +65,7 @@ Make sure you have the following installed:
 - **GET** `/api/products` - Retrieve all products
 - **GET** `/api/products/:id` - Retrieve a single product by ID
 - **POST** `/api/products` - Create a new product
+- **PUT** `/api/products/:id` - Update an existing product by ID
 - **DELETE** `/api/products/:id` - Delete a product by ID
 
 ## Future Enhancements
