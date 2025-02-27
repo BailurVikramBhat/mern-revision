@@ -5,6 +5,7 @@ This project is a basic implementation of a CRUD (Create, Read, Update, Delete) 
 
 ## What's New
 
+- Basic navbar and CreatePage styles available now!
 - The codebase is now highly modularized, making it easier to maintain and extend.
 - The entire backend application is ready for the frontend to consume, with well-defined API endpoints and robust error handling.
 
@@ -52,7 +53,7 @@ Make sure you have the following installed:
 
    ```env
    MONGO_URI=your_mongodb_connection_string
-
+   PORT = 5000
    ```
 
 4. Start the backend server:
