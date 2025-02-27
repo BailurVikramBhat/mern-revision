@@ -45,6 +45,12 @@ export const createProduct = async (req, res) => {
 
 export const deleteProduct = async (req, res) => {
   const { id } = req.params;
+  if(!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(404).json({
+      success: false,
+      message: "Product does not exist"
+    })
+  }
   try {
     await Product.findByIdAndDelete(id);
     res.status(200).json({
@@ -53,9 +59,9 @@ export const deleteProduct = async (req, res) => {
     });
   } catch (error) {
     console.error("Error in deleting product: ", error.message);
-    res.status(404).json({
+    res.status(500).json({
       success: false,
-      message: "Product not found",
+      message: "Server Error",
     });
   }
 };
